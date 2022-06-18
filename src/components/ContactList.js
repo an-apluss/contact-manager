@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import ContactCard from "./ContactCard";
 
 
@@ -15,7 +16,14 @@ const ContactList = ({contacts, getContactId}) => {
     });
 
     return (
-        <div className="ui celled list">
+        <div className="ui big celled list" style={{ marginTop:'70px', }}>
+            <h3 className="header">
+                Contact List
+                <Link to='/add'>
+                    <button className="ui button blue right floated">Add new contact</button>
+                </Link>
+            </h3>
+
             {renderContactList}
         </div>
     );
