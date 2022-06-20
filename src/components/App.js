@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect }  from 'react';
-import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes as Switch, Route } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import '../assets/css/App.css';
 import ContactList from './ContactList';
