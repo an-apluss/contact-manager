@@ -38,11 +38,16 @@ function App() {
     <div className='ui container'>
       <Router>
         <Header />
-        <Switch>
-          <Route path='/' element={<ContactList contacts={contacts} getContactId={removeContactHandler} />} />
-          <Route path='/add' element={<AddContact addContactHandler={addContactHandler} />} />
-          <Route path='/contact/:contactId' element={<ContactDetail />} />
-        </Switch>
+        <div class="ui two column centered grid">
+          <div class="column">
+            <Switch>
+              <Route path='/' element={<ContactList contacts={contacts} getContactId={removeContactHandler} />} />
+              <Route path='/add' element={<AddContact addContactHandler={addContactHandler} />} />
+              <Route path='/contact/:contactId' element={<ContactDetail />} />
+            </Switch>
+          </div>
+        </div>
+        
         
       </Router>
     </div>
